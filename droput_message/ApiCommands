@@ -1,0 +1,7 @@
+curl http://localhost:5001/api/v1/msgs
+
+curl http://localhost:5001/api/v1/msgs/hh
+
+curl -X DELETE http://localhost:5001/api/v1/msgs/ff290e2b439f414cb0c7f5c08825696c
+
+curl -i -H 'Content-Type: application/json' localhost:5001/api/v1/msgs -d '{"sender":"test", "receiver":"test", "content":"salam sayadiam"}'
