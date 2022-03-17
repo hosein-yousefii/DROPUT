@@ -95,6 +95,8 @@ flask run -p 5001 &
 deactivate
 ```
 
+Use "ApiCommands file" to know about APIs and their responsibilities.
+
 
 # How to contribute?
 
