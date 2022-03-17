@@ -1,6 +1,0 @@
-curl http://localhost:5000/api/v1/users
-curl http://localhost:5000/api/v1/users/5b31640e22e94370af0eb134da579f7d
-
-curl -X DELETE http://localhost:5000/api/v1/users/5b31640e22e94370af0eb134da579f7d
-
-curl -i -H 'Content-Type: application/json' localhost:5000/api/v1/users -d '{"username":"sasan", "password":"tes"}'
