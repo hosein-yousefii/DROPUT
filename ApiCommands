@@ -1,0 +1,35 @@
+## Maintainer: Hosein Yousefi <yousefi.hosein.o@gmail.com>
+
+
+## APIs related to droput_authentication
+
+# List all users
+curl http://localhost:5000/api/v1/users
+
+# List a specific user, it's based on their ID, NOT USERNAME.
+curl http://localhost:5000/api/v1/users/5b31640e22e94370af0eb134da579f7d
+
+# Delete a specific user using its ID.
+curl -X DELETE http://localhost:5000/api/v1/users/5b31640e22e94370af0eb134da579f7d
+
+# Create a user
+curl -i -H 'Content-Type: application/json' localhost:5000/api/v1/users -d '{"username":"sasan", "password":"tes"}'
+
+
+
+## APIs related to droput_authentication
+
+# List all messages
+curl http://localhost:5001/api/v1/msgs
+
+# List messages for a specified user (as a sender or receiver)
+curl http://localhost:5001/api/v1/msgs/sasan
+
+# Delete a scpecific message using the message ID.
+curl -X DELETE http://localhost:5001/api/v1/msgs/ff290e2b439f414cb0c7f5c08825696c
+
+# Create a message (both sender and receiver should be exist on database)
+curl -i -H 'Content-Type: application/json' localhost:5001/api/v1/msgs -d '{"sender":"test", "receiver":"test", "content":"salam sayadiam"}'
+
+
+
