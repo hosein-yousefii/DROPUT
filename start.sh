@@ -26,6 +26,8 @@ pip install -r requirements.txt 1> /dev/null
 echo "[Info]: initializing database"
 sleep 2
 
+export FLASK_APP="droput_auth"
+
 flask db init 1> /dev/null
 flask db migrate -m "init" 1> /dev/null
 flask db upgrade &> /dev/null
@@ -58,6 +60,8 @@ pip install -r requirements.txt 1> /dev/null
 
 echo "[Info]: initializing database"
 sleep 2
+
+export FLASK_APP="droput_msg"
 
 flask db init 1> /dev/null
 flask db migrate -m "init" 1> /dev/null
