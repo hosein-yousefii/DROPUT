@@ -29,6 +29,7 @@ python-dotenv==0.19.2
 pytz==2021.3
 simplejson==3.17.6
 six==1.16.0
+PyMySQL==1.0.2
 SQLAlchemy==1.4.32
 tomli==1.2.3
 typing-extensions==4.1.1
