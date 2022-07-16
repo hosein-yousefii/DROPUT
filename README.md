@@ -82,6 +82,7 @@ After that you can run as follow:
 ```
 # for dropt authentication
 
+export FLASK_APP=droput_auth
 cd droput_authentication
 . venv/bin/activate
 flask run &
@@ -89,6 +90,7 @@ deactivate
 
 # for droput messaging
 
+export FLASK_APP=droput_msg
 cd droput_message
 . venv/bin/activate
 flask run -p 5001 &
