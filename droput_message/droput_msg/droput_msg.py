@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from droput_msg.config import Config
+from redis import Redis
 
 
 db = SQLAlchemy()
@@ -12,6 +13,14 @@ ma = Marshmallow()
 
 apiv1_bp = Blueprint("apiv1_bp", __name__, url_prefix="/api/v1")
 apiv1 = Api(apiv1_bp)
+
+redis = Redis(
+	host=Config.REDIS_HOST,
+	port=Config.REDIS_PORT,
+	db=Config.REDIS_DATABASE,
+	password=Config.REDIS_PASSWORD,
+	decode_responses=True
+)
 
 from droput_msg import resource
 

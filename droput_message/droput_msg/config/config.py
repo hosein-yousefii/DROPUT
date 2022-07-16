@@ -25,3 +25,15 @@ class Config:
     SQLALCHEMY_RECORD_QUERIES = DEBUG
 
     SQLALCHEMY_TRACK_MODIFICATIONS = DEBUG
+    # ============================= CACHE Configuration =============================
+
+    REDIS_HOST = environ.get("DROPUT_MSG_REDIS_HOST", "localhost")
+
+    REDIS_PORT = int(environ.get("DROPUT_MSG_REDIS_PORT", "6379"))
+
+    REDIS_DATABASE = int(environ.get("DROPUT_MSG_REDIS_DATABASE", "0"))
+
+    REDIS_PASSWORD = environ.get("DROPUT_MSG_REDIS_PASSWORD", "qazwsx")
+
+    REDIS_CACHE_EXPIRE_SECONDS = int(environ.get("DROPUT_MSG_REDIS_CACHE_EXPIRE_SECONDS", "60"))
+
